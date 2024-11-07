@@ -1,11 +1,38 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    string nome;
-    cout << "Inserisci il tuo nome: ";
-    cin >> nome;
-    cout << "Ciao " <<nome<< "!" << endl;
+int main()
+{
+    int N, ndivisori, divisori, resto;
+
+    cout << "Scrivi un numero intero." << endl;
+
+    cin >> N;
+
+    ndivisori=0;
+
+    for(divisori=1; divisori <= N; divisori=divisori+1)
+    {
+        resto=N%divisori;
+
+        if(resto==0)
+        {
+            cout << divisori << "è divisore." << endl;
+            ndivisori=ndivisori+1;
+
+        }
+        
+    }
+    cout << "I divisori sono " << ndivisori << "." << endl;
+
+    if(ndivisori==2)
+    {
+        cout << N << " è un numero primo." << endl;
+    }
+    else
+    {
+        cout << N << " non è un numero primo." << endl;
+    }
 }
 
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
+
